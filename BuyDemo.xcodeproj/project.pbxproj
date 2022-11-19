@@ -18,6 +18,8 @@
 		84B698D92928BD400045CD35 /* BuyDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B698D82928BD400045CD35 /* BuyDemoTests.m */; };
 		84B698E32928BD400045CD35 /* BuyDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B698E22928BD400045CD35 /* BuyDemoUITests.m */; };
 		84B698E52928BD400045CD35 /* BuyDemoUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B698E42928BD400045CD35 /* BuyDemoUITestsLaunchTests.m */; };
+		84B698F6292921570045CD35 /* BDBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B698F5292921570045CD35 /* BDBottomView.m */; };
+		84B698F929292B9D0045CD35 /* BDTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B698F829292B9D0045CD35 /* BDTopView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,10 @@
 		84B698DE2928BD400045CD35 /* BuyDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BuyDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B698E22928BD400045CD35 /* BuyDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BuyDemoUITests.m; sourceTree = "<group>"; };
 		84B698E42928BD400045CD35 /* BuyDemoUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BuyDemoUITestsLaunchTests.m; sourceTree = "<group>"; };
+		84B698F4292921570045CD35 /* BDBottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BDBottomView.h; sourceTree = "<group>"; };
+		84B698F5292921570045CD35 /* BDBottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BDBottomView.m; sourceTree = "<group>"; };
+		84B698F729292B9D0045CD35 /* BDTopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BDTopView.h; sourceTree = "<group>"; };
+		84B698F829292B9D0045CD35 /* BDTopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BDTopView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,12 +117,13 @@
 		84B698BB2928BD3D0045CD35 /* BuyDemo */ = {
 			isa = PBXGroup;
 			children = (
+				84B698F32929211A0045CD35 /* VC */,
+				84B698F2292921110045CD35 /* Model */,
+				84B698F1292921030045CD35 /* View */,
 				84B698BC2928BD3D0045CD35 /* AppDelegate.h */,
 				84B698BD2928BD3D0045CD35 /* AppDelegate.m */,
 				84B698BF2928BD3D0045CD35 /* SceneDelegate.h */,
 				84B698C02928BD3D0045CD35 /* SceneDelegate.m */,
-				84B698C22928BD3D0045CD35 /* ViewController.h */,
-				84B698C32928BD3D0045CD35 /* ViewController.m */,
 				84B698C52928BD3D0045CD35 /* Main.storyboard */,
 				84B698C82928BD3F0045CD35 /* Assets.xcassets */,
 				84B698CA2928BD3F0045CD35 /* LaunchScreen.storyboard */,
@@ -143,6 +150,33 @@
 			path = BuyDemoUITests;
 			sourceTree = "<group>";
 		};
+		84B698F1292921030045CD35 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84B698F4292921570045CD35 /* BDBottomView.h */,
+				84B698F5292921570045CD35 /* BDBottomView.m */,
+				84B698F729292B9D0045CD35 /* BDTopView.h */,
+				84B698F829292B9D0045CD35 /* BDTopView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84B698F2292921110045CD35 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		84B698F32929211A0045CD35 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				84B698C22928BD3D0045CD35 /* ViewController.h */,
+				84B698C32928BD3D0045CD35 /* ViewController.m */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
 		DA935A145627F2068B078A3B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,7 +191,6 @@
 				71147C2FD2750EF638F66799 /* Pods-BuyDemo.debug.xcconfig */,
 				4E279DF55C62EA5504D25EAB /* Pods-BuyDemo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -337,6 +370,8 @@
 			files = (
 				84B698C42928BD3D0045CD35 /* ViewController.m in Sources */,
 				84B698BE2928BD3D0045CD35 /* AppDelegate.m in Sources */,
+				84B698F929292B9D0045CD35 /* BDTopView.m in Sources */,
+				84B698F6292921570045CD35 /* BDBottomView.m in Sources */,
 				84B698CF2928BD3F0045CD35 /* main.m in Sources */,
 				84B698C12928BD3D0045CD35 /* SceneDelegate.m in Sources */,
 			);

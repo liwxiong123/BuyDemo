@@ -6,9 +6,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "BDBottomView.h"
+#import "BDTopView.h"
 @interface ViewController : UIViewController
 
-
+@property (nonatomic, strong) BDBottomView *bottomView;
+@property (nonatomic, strong) BDTopView *topView;
 @end
 
