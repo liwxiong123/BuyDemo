@@ -6,7 +6,6 @@ use_frameworks!
 pod 'Masonry'
 pod 'SDWebImage'
 pod 'YYModel'
-pod 'SVProgressHUD'
-
+pod 'SDCycleScrollView'
 
 end

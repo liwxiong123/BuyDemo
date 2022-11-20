@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		6358A24C9153AC7FAB014A4D /* Pods_BuyDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11F6D38C9150A3568FC20917 /* Pods_BuyDemo.framework */; };
+		848D6DFA2929B5FA009B1A8F /* BDLocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D6DF92929B5FA009B1A8F /* BDLocationView.m */; };
+		848D6DFD2929BE00009B1A8F /* BDPlateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D6DFC2929BE00009B1A8F /* BDPlateView.m */; };
+		848D6E002929BE1D009B1A8F /* BDScrollOrderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D6DFF2929BE1D009B1A8F /* BDScrollOrderView.m */; };
+		848D6E032929DAC3009B1A8F /* BDModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D6E022929DAC3009B1A8F /* BDModel.m */; };
 		84B698BE2928BD3D0045CD35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B698BD2928BD3D0045CD35 /* AppDelegate.m */; };
 		84B698C12928BD3D0045CD35 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B698C02928BD3D0045CD35 /* SceneDelegate.m */; };
 		84B698C42928BD3D0045CD35 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B698C32928BD3D0045CD35 /* ViewController.m */; };
@@ -43,6 +47,14 @@
 		11F6D38C9150A3568FC20917 /* Pods_BuyDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BuyDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E279DF55C62EA5504D25EAB /* Pods-BuyDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuyDemo.release.xcconfig"; path = "Target Support Files/Pods-BuyDemo/Pods-BuyDemo.release.xcconfig"; sourceTree = "<group>"; };
 		71147C2FD2750EF638F66799 /* Pods-BuyDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuyDemo.debug.xcconfig"; path = "Target Support Files/Pods-BuyDemo/Pods-BuyDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		848D6DF82929B5FA009B1A8F /* BDLocationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BDLocationView.h; sourceTree = "<group>"; };
+		848D6DF92929B5FA009B1A8F /* BDLocationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BDLocationView.m; sourceTree = "<group>"; };
+		848D6DFB2929BE00009B1A8F /* BDPlateView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BDPlateView.h; sourceTree = "<group>"; };
+		848D6DFC2929BE00009B1A8F /* BDPlateView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BDPlateView.m; sourceTree = "<group>"; };
+		848D6DFE2929BE1D009B1A8F /* BDScrollOrderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BDScrollOrderView.h; sourceTree = "<group>"; };
+		848D6DFF2929BE1D009B1A8F /* BDScrollOrderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BDScrollOrderView.m; sourceTree = "<group>"; };
+		848D6E012929DAC3009B1A8F /* BDModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BDModel.h; sourceTree = "<group>"; };
+		848D6E022929DAC3009B1A8F /* BDModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BDModel.m; sourceTree = "<group>"; };
 		84B698B92928BD3D0045CD35 /* BuyDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuyDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B698BC2928BD3D0045CD35 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84B698BD2928BD3D0045CD35 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -157,6 +169,12 @@
 				84B698F5292921570045CD35 /* BDBottomView.m */,
 				84B698F729292B9D0045CD35 /* BDTopView.h */,
 				84B698F829292B9D0045CD35 /* BDTopView.m */,
+				848D6DF82929B5FA009B1A8F /* BDLocationView.h */,
+				848D6DF92929B5FA009B1A8F /* BDLocationView.m */,
+				848D6DFB2929BE00009B1A8F /* BDPlateView.h */,
+				848D6DFC2929BE00009B1A8F /* BDPlateView.m */,
+				848D6DFE2929BE1D009B1A8F /* BDScrollOrderView.h */,
+				848D6DFF2929BE1D009B1A8F /* BDScrollOrderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -164,6 +182,8 @@
 		84B698F2292921110045CD35 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				848D6E012929DAC3009B1A8F /* BDModel.h */,
+				848D6E022929DAC3009B1A8F /* BDModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -368,12 +388,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				848D6E002929BE1D009B1A8F /* BDScrollOrderView.m in Sources */,
 				84B698C42928BD3D0045CD35 /* ViewController.m in Sources */,
 				84B698BE2928BD3D0045CD35 /* AppDelegate.m in Sources */,
+				848D6E032929DAC3009B1A8F /* BDModel.m in Sources */,
+				848D6DFA2929B5FA009B1A8F /* BDLocationView.m in Sources */,
 				84B698F929292B9D0045CD35 /* BDTopView.m in Sources */,
 				84B698F6292921570045CD35 /* BDBottomView.m in Sources */,
 				84B698CF2928BD3F0045CD35 /* main.m in Sources */,
 				84B698C12928BD3D0045CD35 /* SceneDelegate.m in Sources */,
+				848D6DFD2929BE00009B1A8F /* BDPlateView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

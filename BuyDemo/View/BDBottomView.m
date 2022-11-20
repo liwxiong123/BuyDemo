@@ -53,6 +53,9 @@
 //
 //    }];
 }
+- (void)refreshWithPrice:(BDModel *)model {
+    self.sumLabel.text = [NSString stringWithFormat:@"%ld$",(long)model.price];
+}
 
 #pragma mark -- init
 - (UILabel *)sumLabel {
@@ -61,7 +64,7 @@
         _sumLabel.textAlignment = NSTextAlignmentLeft;
         _sumLabel.font = [UIFont boldSystemFontOfSize:43.0f];
         _sumLabel.textColor = [UIColor colorWithRed:79.0/255.0 green:79.0/255.0 blue:79.0/255.0 alpha:1];
-        _sumLabel.text = @"13$";
+        _sumLabel.text = @"0$";
     }
     
     return _sumLabel;
