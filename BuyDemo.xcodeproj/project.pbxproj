@@ -12,6 +12,7 @@
 		848D6DFD2929BE00009B1A8F /* BDPlateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D6DFC2929BE00009B1A8F /* BDPlateView.m */; };
 		848D6E002929BE1D009B1A8F /* BDScrollOrderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D6DFF2929BE1D009B1A8F /* BDScrollOrderView.m */; };
 		848D6E032929DAC3009B1A8F /* BDModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D6E022929DAC3009B1A8F /* BDModel.m */; };
+		849CC418292BB2EB00269092 /* BDAnimateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 849CC417292BB2EB00269092 /* BDAnimateView.m */; };
 		84B698BE2928BD3D0045CD35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B698BD2928BD3D0045CD35 /* AppDelegate.m */; };
 		84B698C12928BD3D0045CD35 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B698C02928BD3D0045CD35 /* SceneDelegate.m */; };
 		84B698C42928BD3D0045CD35 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B698C32928BD3D0045CD35 /* ViewController.m */; };
@@ -55,6 +56,8 @@
 		848D6DFF2929BE1D009B1A8F /* BDScrollOrderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BDScrollOrderView.m; sourceTree = "<group>"; };
 		848D6E012929DAC3009B1A8F /* BDModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BDModel.h; sourceTree = "<group>"; };
 		848D6E022929DAC3009B1A8F /* BDModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BDModel.m; sourceTree = "<group>"; };
+		849CC416292BB2EB00269092 /* BDAnimateView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BDAnimateView.h; sourceTree = "<group>"; };
+		849CC417292BB2EB00269092 /* BDAnimateView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BDAnimateView.m; sourceTree = "<group>"; };
 		84B698B92928BD3D0045CD35 /* BuyDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuyDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B698BC2928BD3D0045CD35 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84B698BD2928BD3D0045CD35 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -175,6 +178,8 @@
 				848D6DFC2929BE00009B1A8F /* BDPlateView.m */,
 				848D6DFE2929BE1D009B1A8F /* BDScrollOrderView.h */,
 				848D6DFF2929BE1D009B1A8F /* BDScrollOrderView.m */,
+				849CC416292BB2EB00269092 /* BDAnimateView.h */,
+				849CC417292BB2EB00269092 /* BDAnimateView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -391,6 +396,7 @@
 				848D6E002929BE1D009B1A8F /* BDScrollOrderView.m in Sources */,
 				84B698C42928BD3D0045CD35 /* ViewController.m in Sources */,
 				84B698BE2928BD3D0045CD35 /* AppDelegate.m in Sources */,
+				849CC418292BB2EB00269092 /* BDAnimateView.m in Sources */,
 				848D6E032929DAC3009B1A8F /* BDModel.m in Sources */,
 				848D6DFA2929B5FA009B1A8F /* BDLocationView.m in Sources */,
 				84B698F929292B9D0045CD35 /* BDTopView.m in Sources */,

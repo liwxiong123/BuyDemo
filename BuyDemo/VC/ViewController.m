@@ -12,6 +12,7 @@
 #import "BDLocationView.h"
 #import <SDCycleScrollView/SDCycleScrollView.h>
 #import "BDModel.h"
+#import "BDAnimateView.h"
 //TODO 待补充动画效果
 @interface ViewController ()<SDCycleScrollViewDelegate>
 @property(nonatomic, strong) SDCycleScrollView *cycleView;
@@ -97,7 +98,9 @@
     self.cycleView.titleLabelTextFont = [UIFont systemFontOfSize:32];
     self.cycleView.titleLabelTextColor = [UIColor colorWithRed:235.0/255.0 green:92.0/255.0 blue:119.0/255.0 alpha:1];
     self.cycleView.delegate = self;
-    [self.cycleView autoScroll];
+//    [self.cycleView autoScroll];
+    self.cycleView.autoScroll = false;
+    self.cycleView.infiniteLoop = NO;
     [self.view addSubview:self.cycleView];
     [self.cycleView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.mas_equalTo(self.view);
@@ -111,6 +114,14 @@
         make.right.mas_equalTo(self.view.mas_right).offset(-10);
         make.bottom.mas_equalTo(self.cycleView.mas_bottom).offset(-39);
     }];
+    
+    [self.view addSubview:self.animateView];
+    CGFloat topOffset = 0;
+    if (@available(iOS 11.0, *)) {
+        UIWindow *window = UIApplication.sharedApplication.windows.firstObject;
+        topOffset = window.safeAreaInsets.top;
+    }
+    self.animateView.frame = CGRectMake( 50,65 + topOffset + 50, 170, 170);
 }
 
 - (void)onAddFood {
@@ -122,21 +133,29 @@
     } else {
         self.totalPrice += 6;
     }
-    [self.plateView refreshWithIndex:self.currentIndex];
-    BDModel *model = [[BDModel alloc] init];
-    model.price = self.totalPrice;
-    [self.bottomView refreshWithPrice:model];
+    BOOL needAdded = [self.plateView refreshWithIndex:self.currentIndex];
+    if (needAdded) {
+        BDModel *model = [[BDModel alloc] init];
+        model.price = self.totalPrice;
+        [self.bottomView refreshWithPrice:model];
+    }
+
 }
 
 #pragma mark -- delegate
 /** 点击图片回调 */
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index {
     self.currentIndex = index;
+//    NSLog(@"cycleOffset x:%d, y:%d",cycleScrollView.frame.origin.x,cycleScrollView.frame.origin.y);
 }
 
 /** 图片滚动回调 */
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didScrollToIndex:(NSInteger)index {
     self.currentIndex = index;
+}
+
+- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView scrollViewDidScroll:(CGFloat)ratio {
+    [self.animateView refreshLocation:ratio];
 }
 
 - (BDBottomView *)bottomView {
@@ -165,6 +184,13 @@
         _plateView = [[BDPlateView alloc] init];
     }
     return  _plateView;
+}
+
+- (BDAnimateView *)animateView {
+    if (!_animateView) {
+        _animateView = [[BDAnimateView alloc] initWithFrame:CGRectMake(50, 50, 170, 170)];
+    }
+    return  _animateView;
 }
 
 - (UIButton *)addBtn {

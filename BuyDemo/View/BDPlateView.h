@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BDPlateView : UIView
 
--(void)refreshWithIndex:(NSInteger)index;
+-(BOOL)refreshWithIndex:(NSInteger)index;
 
 @end
 

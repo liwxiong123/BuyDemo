@@ -40,7 +40,7 @@
 
 NSString * const ID = @"SDCycleScrollViewCell";
 
-@interface SDCycleScrollView () <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface SDCycleScrollView () <UICollectionViewDataSource, UICollectionViewDelegate,UIScrollViewDelegate>
 
 
 @property (nonatomic, weak) UICollectionView *mainView; // 显示图片的collectionView
@@ -300,7 +300,7 @@ NSString * const ID = @"SDCycleScrollViewCell";
     
     _imagePathsGroup = imagePathsGroup;
     
-    _totalItemsCount = self.infiniteLoop ? self.imagePathsGroup.count * 100 : self.imagePathsGroup.count;
+    _totalItemsCount = self.infiniteLoop ? self.imagePathsGroup.count : self.imagePathsGroup.count;
     
     if (imagePathsGroup.count > 1) { // 由于 !=1 包含count == 0等情况
         self.mainView.scrollEnabled = YES;
@@ -633,6 +633,16 @@ NSString * const ID = @"SDCycleScrollViewCell";
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     if (!self.imagePathsGroup.count) return; // 解决清除timer时偶尔会出现的问题
+    NSLog(@"scrollview.offset.x:%f, scrollview.offset.y:%f,",scrollView.contentOffset.x, scrollView.contentOffset.y);
+    CGFloat width = scrollView.contentSize.width /_totalItemsCount;
+    int x = (int)scrollView.contentOffset.x % (int)width;
+//    CGFloat y = scrollview.contentOffset.y;
+    
+//    CGFloat height = scrollView.contentSize.height;
+    CGFloat superVWidth = scrollView.superview.frame.size.width;
+//    CGFloat superVHeight = scrollview.superview.frame.size.height;
+    CGFloat ratio = (x)/width ;
+    NSLog(@"ratio:%f",ratio);
     int itemIndex = [self currentIndex];
     int indexOnPageControl = [self pageControlIndexWithCurrentCellIndex:itemIndex];
     
@@ -642,6 +652,9 @@ NSString * const ID = @"SDCycleScrollViewCell";
     } else {
         UIPageControl *pageControl = (UIPageControl *)_pageControl;
         pageControl.currentPage = indexOnPageControl;
+    }
+    if ([self.delegate respondsToSelector:@selector(cycleScrollView:scrollViewDidScroll:)]) {
+        [self.delegate cycleScrollView:self scrollViewDidScroll:ratio];
     }
 }
 

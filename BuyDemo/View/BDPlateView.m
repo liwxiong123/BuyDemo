@@ -63,15 +63,19 @@
     
 }
 
--(void)refreshWithIndex:(NSInteger)index {
+-(BOOL)refreshWithIndex:(NSInteger)index {
     //0 hanber 1:coffee 2:snap
     if (index == 0 && self.hanberView.hidden == YES) {
         self.hanberView.hidden = NO;
+        return YES;
     } else if(index == 1 && self.coffeeView.hidden == YES) {
         self.coffeeView.hidden = NO;
+        return YES;
     } else if(index == 2 && self.snapView.hidden == YES) {
         self.snapView.hidden = NO;
+        return YES;
     }
+    return NO;
 }
 
 - (UIImageView *)backgroudView {
